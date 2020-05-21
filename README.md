@@ -42,27 +42,29 @@ Git command on a cloned repository
 * `git diff commitID_old commitID_new`
 * `git config --global color.ui auto`: Colorize git output. `--global` means applying to all files , not only this one  
 * `git checkout commitID_old`: Because we want to know which file in the repository has the bug
->``` Shell
+
+
+``` shell
 (base) Chenzis-MBP:asteroids chenzizhang$ git checkout b0678b161fcf74467ed3a63110557e3d6229cfa6
 Note: switching to 'b0678b161fcf74467ed3a63110557e3d6229cfa6'.
->
->You are in 'detached HEAD' state. You can look around, make experimental
+
+You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
 state without impacting any branches by switching back to a branch.
->
->If you want to create a new branch to retain commits you create, you may
+
+If you want to create a new branch to retain commits you create, you may
 do so (now or later) by using -c with the switch command. Example:
->
->  git switch -c <new-branch-name>
->
->Or undo this operation with:
->
->  git switch -
->
->Turn off this advice by setting config variable advice.detachedHead to false
->
->HEAD is now at b0678b1 Revert controls
->```
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at b0678b1 Revert controls
+```
 
 Git errors and warnings solution  
 * Warning: `Should not be doing an octopus`  
@@ -193,7 +195,8 @@ Comparing working directory, staging area, and repository:
 * `git checkout master` before commit: When you checked out an old commit, run this command to fix `detached HEAD` state.  
 
 ### Code
-```shell
+
+``` shell
 chenzizhang ~ $ cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/DS_Track/Udacity/Git-GitHub/
 chenzizhang Git-GitHub $ ls
 LICENSE game_new.js game_old.js reflections version-control
@@ -268,7 +271,7 @@ Already on 'master'
 
 Example Code  
 
->```shell
+```shell
 chenzizhang version-control $ cd asteroids
 chenzizhang ((25ede83...)) asteroids $ git branch
 * (HEAD detached at 25ede83)
@@ -304,7 +307,7 @@ chenzizhang (easy-mode +) asteroids $ git commit
 chenzizhang (easy-mode) asteroids $ git status
 On branch easy-mode
 nothing to commit, working tree clean
->```
+```
 
 ### View Branch Graph: `git log --graph`
 
@@ -316,7 +319,7 @@ Command
 * `git log`: View commit history
 
 Example Code  
->```shell
+```shell
 chenzizhang (easy-mode) asteroids $ git checkout coins
 Branch 'coins' set up to track remote branch 'coins' from 'origin'.
 Switched to a new branch 'coins'
@@ -347,9 +350,9 @@ chenzizhang (master) asteroids $ git log --graph --oneline master coins
 * fe7993e now capturing down key so people don't accidently scroll the page
 * 343935f added license
 ...
->```
+```
 
->```Shell
+```Shell
 chenzizhang (coins) asteroids $ git log
 commit 354dfdd530b1631a2834b2e9e242d31e625c9c13 (HEAD -> coins, origin/coins)
 Author: Sarah Spikes <sarah@udacity.com>
@@ -371,8 +374,9 @@ commit b0678b161fcf74467ed3a63110557e3d6229cfa6
 Author: cbuckey <caroline@udacity.com>
 Date:   Mon May 24 04:15:21 2010 -0700
     Revert controls
->```
->```Shell
+```
+
+```Shell
 chenzizhang (master) asteroids $ git log
 commit 3884eab839af1e82c44267484cf2945a766081f3 (HEAD -> master, origin/master, origin/HEAD)
 Author: cbuckey <caroline@udacity.com>
@@ -395,12 +399,14 @@ Date:   Wed May 26 23:52:00 2010 -0700
 commit df035382c41b4d0cda86a1aa30b53f15bef05b53
 Author: Doug McInnes <doug@dougmcinnes.com>
 Date:   Tue May 25 22:18:23 2010 -0700
-    I can't spell 'screen' apparently :)
+    I cannot spell 'screen' apparently :)
 commit b0678b161fcf74467ed3a63110557e3d6229cfa6
 Author: cbuckey <caroline@udacity.com>
 Date:   Mon May 24 04:15:21 2010 -0700
     Revert controls
->```
+
+```
+
 
 ### Reachability  
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblx0QVtlM2RdIC0tPiBCW2YyNl1cblx0QiAtLT4gfGF8IENbM2ZjXVxuXHRBIC0tPiBEWzJjNF1cblx0RCAtLT4gRVs3ZGNdXG5cdEUgLS0-IEZbZjM2XVxuICBcdEUgLS0-fGJ8IEdbNGQ5XVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblx0QVtlM2RdIC0tPiBCW2YyNl1cblx0QiAtLT4gfGF8IENbM2ZjXVxuXHRBIC0tPiBEWzJjNF1cblx0RCAtLT4gRVs3ZGNdXG5cdEUgLS0-IEZbZjM2XVxuICBcdEUgLS0-fGJ8IEdbNGQ5XVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)  
@@ -447,7 +453,7 @@ Current check-out branch is included in the merged version after `git merge`. Fo
 
 
 Example Code  
->```Shell
+```Shell
 chenzizhang (master) asteroids $ git branch
   coins
   easy-mode
@@ -517,7 +523,7 @@ index 5daadb0..7595a9d 100644
        case 'm': // mute
 chenzizhang (master) asteroids $ git branch -d coins
 Deleted branch coins (was 354dfdd).
->```
+```
 
 Next Steps  
 Make more changes on the new `master`: Change coin color to yellow  
@@ -526,7 +532,7 @@ Make more changes on the new `master`: Change coin color to yellow
 * Edit the script `game.js` and take a look at your eidtion: `git diff`  
 * Add and commit the new script version: `git add game.js` and `git commit`
 
->```Shell
+```Shell
 chenzizhang (master) asteroids $ git show 3884eab839af1e82c44267484cf2945a766081f3
 commit 3884eab839af1e82c44267484cf2945a766081f3 (origin/master, origin/HEAD)
 Author: cbuckey <caroline@udacity.com>
@@ -623,7 +629,7 @@ chenzizhang (master *) asteroids $ git add game.js
 chenzizhang (master +) asteroids $ git commit
 [master 4851594] Make coins yellow
  1 file changed, 2 insertions(+)
->```
+```
 
 ### Merging Conflicts  
 
@@ -632,13 +638,13 @@ Why Conflicts
 
 
 Automatic Merging Failed
->```Shell
+```Shell
 Auto-merging game.js
 CONFLICT (content): Merge conflict in game.js
 Automatic merge failed; fix conflicts and then commit the result.
->```
->* `git merge --abort`: Restore files to their state before merging
->* `git show [commit_ID]`: Compare a commit to its parent  
+```
+* `git merge --abort`: Restore files to their state before merging
+* `git show [commit_ID]`: Compare a commit to its parent  
 
 Manual Merging  
 
@@ -648,7 +654,7 @@ Manual Merging
 
 
 Example Code `game.js`  
->```Shell
+```Shell
 chenzizhang (easy-mode) asteroids $ git branch
 * easy-mode
   master
@@ -656,9 +662,11 @@ chenzizhang (easy-mode) asteroids $ git merge master easy-mode
 Auto-merging game.js
 CONFLICT (content): Merge conflict in game.js
 Automatic merge failed; fix conflicts and then commit the result.
->```
+```
+
 Before
->```
+
+```
 Asteroid = function() {  
   this.breakIntoFragments = function () {
     for (var i = 0; i < 3; i++) {
@@ -736,7 +744,7 @@ Asteroid = function() {
     }
   };
 };
->```
+```
 
 
 
@@ -759,7 +767,7 @@ Create an origin remote and send local commits to GitHub by `git push`
 * STEP 4: `git remote -v`
 * STEP 5: `git push origin master`
 
->```shell
+```shell
 chenzizhang (master) reflections $ git remote -v
 origin https://github.com/chenzizhang/reflections.git (fetch)
 origin https://github.com/chenzizhang/reflections.git (push)
@@ -772,7 +780,7 @@ Writing objects: 100% (3/3), 747 bytes | 747.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/chenzizhang/reflections.git
  * [new branch]      master -> master
->```
+```
 
 ### Change a Remote Directly  
 Create or change files directly on the **GitHub website**. For instance, create a file for lesson 3 and add the first reflection.  
@@ -782,7 +790,7 @@ Create or change files directly on the **GitHub website**. For instance, create 
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblx0TG9jYWwgLS0-IEFbVXBkYXRlIGxpbmVzXVxuXHRBIC0tPiB8bWFzdGVyKnwgRVtmaXJzdCBsZXNzb24gcmVmbGVjdGlvbl1cblx0R2l0SHViIC0tPiBDW1VwZGF0ZSBsaW5lc11cblx0QyAtLT4gfG1hc3RlcnwgRFtmaXJzdCBsZXNzb24gcmVmbGVjdGlvbl1cblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblx0TG9jYWwgLS0-IEFbVXBkYXRlIGxpbmVzXVxuXHRBIC0tPiB8bWFzdGVyKnwgRVtmaXJzdCBsZXNzb24gcmVmbGVjdGlvbl1cblx0R2l0SHViIC0tPiBDW1VwZGF0ZSBsaW5lc11cblx0QyAtLT4gfG1hc3RlcnwgRFtmaXJzdCBsZXNzb24gcmVmbGVjdGlvbl1cblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
 
->```shell
+```shell
 chenzizhang (master) reflections $ git pull origin master
 From https://github.com/chenzizhang/reflections
  * branch            master     -> FETCH_HEAD
@@ -800,7 +808,7 @@ commit 2d7d27985c129aaa432cb76f7e7f97784ebbac9f
 Author: Chenzi Zhang <chenzi.zhang.96@gmail.com>
 Date:   Sun May 10 18:00:45 2020 -0400
     Update Lesson 1 Reflection
->```
+```
 
 
 
@@ -819,7 +827,7 @@ Fork a repository from sam to your account on GitHub
 ![Fork2](Fork2.png)
 ![Fork3](Fork3.png)
 
->```Shell
+```Shell
 chenzizhang Git-GitHub $ cd version-control
 chenzizhang version-control $ git clone https://github.com/chenzizhang/recipes.git
 Cloning into 'recipes'...
@@ -830,7 +838,7 @@ chenzizhang version-control $ cd recipes
 chenzizhang (master) recipes $  git remote -v
 origin https://github.com/chenzizhang/recipes.git (fetch)
 origin https://github.com/chenzizhang/recipes.git (push)
->```
+```
 
 Where was my commit?  
 * Add a new recipe on my computer and commit it on the master branch  
@@ -844,7 +852,7 @@ Where was my commit?
 
 Oepn, revise and push
 
->```Shell
+```Shell
 chenzizhang (master) recipes $ open chili-recipe.txt
 chenzizhang (master) recipes $ git add chili-recipe.txt
 chenzizhang (master +) recipes $ git status
@@ -861,7 +869,7 @@ On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 nothing to commit, working tree clean
->```
+```
 
 
 ### Updating Local Copies of Remote Branches: `git fetch`,`git pull`[[top](#Git-and-GitHub-Notes)]
@@ -879,7 +887,7 @@ nothing to commit, working tree clean
 
 `git pull origin master` = `git fetch origin` + `git merge master origin/master`  
 
->```Shell
+```Shell
 chenzizhang (master) recipes $ git branch -a
 * master
   remotes/origin/HEAD -> origin/master
@@ -915,7 +923,7 @@ index c42469e..cbb5244 100644
   3. Stir, then cover and simmer over low heat for one hour.
   4. Mix the corn flour and 1/2 cup water in a small bowl.  Add to chili.
   5. Add the beans and simmer for 10 more minutes.
->```
+```
 
 |  | `git log origin/master`| `git status` |
 |---|---|---|
@@ -923,7 +931,7 @@ index c42469e..cbb5244 100644
 | After `git fetch`|(1) Add chili recipe (2) Remove cumin|Out-of-sync|
 
 After `git fetch`
->```Shell
+```Shell
 chenzizhang (master) recipes $ git log origin/master
 commit 78cab31e223c38a452bf922b54b3e6d77da6da50 (origin/master, origin/HEAD)
 Author: Sarah Spikes <sarah+github@udacity.com>
@@ -967,14 +975,14 @@ commit b36125034401bc8c6d3984c032f400f157a32c48
 Author: Larry Madrigal <larry@udacity.com>
 Date:   Thu Sep 25 11:08:01 2014 -0700
     Add a cake and frosting recipe
->```
+```
 
 #### Merging the Changes Together  
 
 * Make a change and commit it in master branch locally  
 * Fetch origin and merge origin/master to new master  
 
->```Shell
+```Shell
 chenzizhang (master) recipes $ git add chili-recipe.txt
 chenzizhang (master) recipes $ git commit
 On branch master
@@ -1004,7 +1012,7 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 sarah_changes.sh
 nothing added to commit but untracked files present (use "git add" to track)
->```
+```
 
 #### Fast-Forward Merges  
 
@@ -1054,7 +1062,7 @@ Also check out local working directory and local staging area for git pull origi
 
 When you made a pull request and the forked repository response you pointing out your bugs by an email, you would like to commit your fix next.
 
->```Shell
+```Shell
 chenzizhang (different-oil *) recipes $ git add cake-recipe.txt
 chenzizhang (different-oil +) recipes $ git commit
 [different-oil ac12f4a] Fix canola typo
@@ -1069,7 +1077,7 @@ Total 3 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/chenzizhang/recipes.git
    096d89b..ac12f4a  different-oil -> different-oil
->```
+```
 
 ![fix bugs](fix.png)
 
@@ -1100,7 +1108,7 @@ This is between STEP 4 and STEP 5 in the previous section. When merging the conf
  - Check out the `master` branch  
  - Use `git add` on the conflict files before committing  
 
->```shell
+```shell
 bash sarah_changes_2.sh https://github.com/chenzizhang/recipes.git
 chenzizhang (master) recipes $ git log
 chenzizhang (master) recipes $ git pull origin master
@@ -1110,9 +1118,11 @@ Updating f52f2aa..7519905
 Fast-forward
  cake-recipe.txt | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
->```
+```
+
 Since we already know what changes are (Otherwise, we use `git fetch` `git merge origin/master master`):
->```shell
+
+```shell
 chenzizhang (master) recipes $ git pull origin master
 From https://github.com/chenzizhang/recipes
  * branch            master     -> FETCH_HEAD
@@ -1141,9 +1151,11 @@ Author: Sarah Spikes <sarah+github@udacity.com>
 Date:   Tue May 12 22:51:51 2020 -0400
     Merge pull request from more-oil    
     Add more oil so the cake is more moist!
->```
-It contains both of the changes.  
->```Shell
+```
+
+It contains both of the changes.
+
+```Shell
 chenzizhang (different-oil) recipes $ git push origin different-oil
 Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
@@ -1154,7 +1166,7 @@ Total 3 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/chenzizhang/recipes.git
    ac12f4a..b3aec5c  different-oil -> different-oil
->```
+```
 
 ![updating conflicts1](conflict1.png)
 ![updating conflicts2](conflict2.png)
