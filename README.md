@@ -1,5 +1,10 @@
-# Git and GitHub Notes
+---
+layout: Cayman
+title: Git and GitHub Tutorial Notes
+---
+
 :tangerine: **Author: Chenzi Zhang**  
+
 Course notes for Udacity ['How to Use Git and GitHub'](https://classroom.udacity.com/courses/ud775).   
 
 This course provides an introduction to Git version control logic and practice and further gives instruction to project collaboration on GitHub.
