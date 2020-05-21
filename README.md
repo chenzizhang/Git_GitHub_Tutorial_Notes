@@ -12,7 +12,48 @@ Links
 [Git Cheat Sheet](https://github.com/github/training-kit/blob/master/downloads/github-git-cheat-sheet.pdf)  
 [Commit Style Guide](http://udacity.github.io/git-styleguide/)
 
-
+Table of Contents  
+- [Lesson 1: Version Control](#lesson-1--version-control)
+  * [Basic Command For Commit History Navigation](#basic-command-for-commit-history-navigation)
+  * [Git Workspace Setup](#git-workspace-setup)
+  * [Summary](#summary)
+- [Lesson 2: Read and Write Git](#lesson-2--read-and-write-git)
+  * [Repository, Staging Area and Commit](#repository--staging-area-and-commit)
+    + [Logics](#logics)
+    + [Repository: Create by `git init`](#repository--create-by--git-init-)
+    + [Staging Area: An Intermediate Step by `git add` and `git reset`](#staging-area--an-intermediate-step-by--git-add--and--git-reset-)
+    + [Commit: Elegant Commit Message by `git commit`](#commit--elegant-commit-message-by--git-commit-)
+    + [Revised: See by `git diff`](#revised--see-by--git-diff-)
+    + [Code](#code)
+  * [Branches](#branches)
+    + [Logics](#logics-1)
+    + [Make a Branch: `git branch`](#make-a-branch---git-branch-)
+    + [View Branch Graph: `git log --graph`](#view-branch-graph---git-log---graph-)
+    + [Reachability](#reachability)
+    + [Detached HEAD Revisited: `git checkout`](#detached-head-revisited---git-checkout-)
+  * [Combining Files](#combining-files)
+    + [Merging a Change into Master: Auto-Merging `git merge`](#merging-a-change-into-master--auto-merging--git-merge-)
+    + [Merging Conflicts](#merging-conflicts)
+- [Lesson 3: Share and Collaboration on GitHub](#lesson-3--share-and-collaboration-on-github)
+  * [GitHub vs Local](#github-vs-local)
+    + [Syncing Repositories: `git remote`, `git push`](#syncing-repositories---git-remote----git-push-)
+    + [Change a Remote Directly](#change-a-remote-directly)
+    + [Pulling Changes: `git pull origin master`](#pulling-changes---git-pull-origin-master-)
+  * [Collaboration on GitHub](#collaboration-on-github)
+    + [Forking a Repository: Make a Copy](#forking-a-repository--make-a-copy---top---git-and-github-notes--)
+    + [Conflict](#conflict----top---git-and-github-notes--)
+    + [Updating Local Copies of Remote Branches: `git fetch`,`git pull`](#updating-local-copies-of-remote-branches---git-fetch---git-pull---top---git-and-github-notes--)
+      - [Merging the Changes Together](#merging-the-changes-together)
+      - [Fast-Forward Merges](#fast-forward-merges)
+    + [Pull Request](#pull-request----top---git-and-github-notes--)
+      - [Making a Pull Request](#making-a-pull-request)
+      - [Updating a Pull Request](#updating-a-pull-request)
+      - [Conflicting Changes](#conflicting-changes)
+      - [Updating Your Local Repository](#updating-your-local-repository)
+    + [Fork](#fork----top---git-and-github-notes--)
+      - [Modifying the Adventure Repository](#modifying-the-adventure-repository)
+      - [Keeping a Fork Up-to-Date](#keeping-a-fork-up-to-date)
+- [Reference](#reference)
 
 
 # Lesson 1: Version Control
@@ -1196,7 +1237,7 @@ Steps
 #### Keeping a Fork Up-to-Date
 Set up an upstream remote on original repository
 
-![Fork Update](fork1.png)
+![Fork Update](Fork1.png)
 
 Steps:
 - `git remote upstream https://github.com/udacity/create-your-own-adventure.git`
@@ -1218,3 +1259,5 @@ This pull request can be automatically merged.
 # Reference  
 Markdown
 * Diagram Editor: [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgQVtDaHJpc3RtYXNdIC0tPnxHZXQgbW9uZXl8IEIoR28gc2hvcHBpbmcpXG4gIEIgLS0-IEN7TGV0IG1lIHRoaW5rfVxuICBDIC0tPnxPbmV8IERbTGFwdG9wXVxuICBDIC0tPnxUd298IEVbaVBob25lXVxuICBDIC0tPnxUaHJlZXwgRltmYTpmYS1jYXIgQ2FyXVxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)
+
+* Table of contents: <a href='http://ecotrust-canada.github.io/markdown-toc/'>Generated with markdown-toc
