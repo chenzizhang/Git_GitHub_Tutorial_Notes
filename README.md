@@ -1,7 +1,4 @@
----
-layout: Cayman
-title: Git and GitHub Tutorial Notes
----
+# Git and GitHub Tutorial Notes
 
 :tangerine: **Author: Chenzi Zhang**  
 
